@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmx</title>
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-4 flex flex-col justify-between min-h-screen">
+
+    <div id="content-block-more">
+        <h1 class="text-3xl">👋🏼 Hi! 🧑 </h1>
+        <h2 class="text-xl">The URL has changed <a href="/about.html" class="text-purple-500">/about.html</a></h2>
+        <h2 class="text-xl">You're now at a friend's 🏠 House</h2>
+        <button class="button-54 mt-4" onclick="location.href='/index.html'">BACK</button>
+        <h2 class="text-xl mt-4">Return to <a href="/" class="text-green-500">/index.html</a></h2>
+    </div>
+
+    <footer class="text-left text-gray-400 text-sm mt-4 pl-4">htmx demo by <a href="https://jessejesse.com" class="text-gray-400 underline">JesseJesse.com</a></footer>
+
+
+    <style>
+        .button-54 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-54:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .button-54 {
+                padding: 0.25em 0.75em;
+            }
+        }
+    </style>
+</body>
+</html>

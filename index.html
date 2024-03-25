@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmx demo</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-4">
+
+
+    <div id="content">
+        <div id="content-block-1">
+            <h1 class="text-3xl font-bold">Hello World!</h1>
+            <h2 class="text-xl">Welcome to a VERY short demo of htmx</h2>
+            <h2 class="text-xl">You're here <a href="index.html" class="text-purple-500">index.html</a></h2>
+            <h2 class="text-xl">If your <a href="#" class="text-green-500">supercoolwebsite</a> has an about page</h2>
+            <h2 class="text-xl">you might point to it with a link or button.</h2>
+            <h2 class="text-xl">much like traveling to a friend's house to visit</h2><br>
+            <button class="button-55" onclick="openAboutPage()">FRIEND'S HOUSE</button>
+            <hr class="my-4">
+        </div>
+        
+      
+        <script>
+            function openAboutPage() {
+                window.location.href = 'about.html';
+            }
+        </script>
+        
+        <!-- htmx -->
+        <h1 class="text-3xl font-bold">Hello htmx!</h1>
+        <h2 class="text-xl">modern features directly from HTML.</h2>
+        <h2 class="text-xl">No Javascript needed, htmx uses AJAX!</h2>
+        <h2 class="text-xl">call and invite those same friends over</h2>
+        <h2 class="text-xl">As many times as you want!</h2>
+
+      
+        <div id="additional-content"></div>
+        
+       
+        <button id="load-more-button" hx-get="/page2.html" hx-swap="afterend" hx-target="#additional-content" class="button-64 mt-8">HTMX</button>
+    </div>
+
+    <script>
+        document.getElementById('load-more-button').addEventListener('click', function() {
+            this.click();
+        });
+    </script>
+
+
+
+
+    <style>
+       
+        .button-55 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-55:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .button-55 {
+                padding: 0.25em 0.75em;
+            }
+        }
+
+        
+        .button-64 {
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: Phantomsans, sans-serif;
+            font-size: 20px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 3px;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .button-64:active,
+        .button-64:hover {
+            outline: 0;
+        }
+
+        .button-64 span {
+            background-color: rgb(5, 6, 45);
+            padding: 16px 24px;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            transition: 300ms;
+        }
+
+        .button-64:hover span {
+            background: none;
+        }
+
+        @media (min-width: 768px) {
+            .button-64 {
+                font-size: 24px;
+                min-width: 196px;
+            }
+        }
+    </style>
+</body>
+</html>
+
+

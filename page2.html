@@ -3,20 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>invite</title>
+    <title>Invite - Friends Arrived</title>
     <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body  class="bg-gray-900 text-white p-4">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
 
-    <div id="content-block-more">
-        <h1 class="text-3xl">👋🏼 Hi! 🧑</h1>
-        <h2 class="text-xl">Your friends have arrived</h2>
-        <h2 class="text-xl">URL is the same&nbsp;<a href="/" class="text-green-500">index.html</a></h2>
-        <h2 class="text-xl">htmx has invited your friends over without reloading</h2>
-        <h2 class="text-xl">Pressing htmx again is rendering content from&nbsp;<a href="/about.html" class="text-green-500">about.html</a></h2>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: 0.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #00feba, #ff3cac);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+        }
+
+        .link {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link:hover {
+            color: #00ffaa;
+            text-shadow: 0 0 8px #00ffcc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+            }
+            100% {
+                text-shadow: 0 0 15px cyan, 0 0 30px cyan;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="glow-text">👋 Welcome, Friends!</h1>
+        <h2 class="text-xl mt-4">Your friends have arrived 🎉</h2>
+        <h2 class="text-xl">URL remains the same ➡️ <a href="/" class="link">index.html</a></h2>
+        <h2 class="text-xl">HTMX made this happen instantly, no refresh! ⚡</h2>
+        <h2 class="text-xl">Next stop? Visit <a href="/about.html" class="link">about.html</a> without a reload.</h2>
     </div>
 
 </body>
 </html>
+
 

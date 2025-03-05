@@ -8,67 +8,56 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(120deg, #1a1a2e, #16213e);
-            color: white;
-            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
             padding: 2rem;
-            animation: fadeIn 1s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
         }
 
         .container {
             max-width: 800px;
-            margin: auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            transition: 0.5s ease-in-out;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, #00feba, #ff3cac);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 1.5s infinite alternate;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #5eead4; /* Soft cyan */
         }
 
-        .glow-text {
-            text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+        h2 {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: #d1d5db; /* Light gray */
         }
 
         .link {
-            color: #00ffcc;
+            color: #60a5fa;
             text-decoration: none;
-            transition: 0.3s;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
         }
 
         .link:hover {
-            color: #00ffaa;
-            text-shadow: 0 0 8px #00ffcc;
+            color: #3b82f6;
+            text-decoration: underline;
         }
 
         @keyframes fadeIn {
-            from {
+            0% {
                 opacity: 0;
                 transform: translateY(-20px);
             }
-            to {
+            100% {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px cyan, 0 0 20px cyan;
-            }
-            100% {
-                text-shadow: 0 0 15px cyan, 0 0 30px cyan;
             }
         }
     </style>
@@ -76,14 +65,15 @@
 <body>
 
     <div class="container">
-        <h1 class="glow-text">👋 Welcome, Friends!</h1>
-        <h2 class="text-xl mt-4">Your friends have arrived 🎉</h2>
-        <h2 class="text-xl">URL remains the same ➡️ <a href="/" class="link">index.html</a></h2>
-        <h2 class="text-xl">HTMX made this happen instantly, no refresh! ⚡</h2>
-        <h2 class="text-xl">Next stop? Visit <a href="/about.html" class="link">about.html</a> without a reload.</h2>
+        <h1>👋 Welcome, Friends!</h1>
+        <h2>Your friends have arrived 🎉</h2>
+        <h2>URL remains the same: <a href="/" class="link">index.html</a></h2>
+        <h2>HTMX made this happen instantly without reloading!</h2>
+        <h2>Next? Check out the <a href="/about.html" class="link">About Page</a>.</h2>
     </div>
 
 </body>
 </html>
+
 
 
